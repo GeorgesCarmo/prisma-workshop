@@ -10,7 +10,8 @@
     "dev": "ts-node ./script.ts"
   },
   "dependencies": {
-    "@prisma/client": "4.7.1"
+    "@prisma/client": "4.7.1",
+    "script": "file:"
   },
   "engines": {
     "node": ">=10.0.0"

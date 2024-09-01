@@ -11,7 +11,18 @@ model User {
   id Int @id @default(autoincrement())
   name String?
   email String @unique
+  posts Post[]
 }
+// npx prisma migrate dev --name init  
+// npx prisma studio
 
+model Post {
+  id Int @id @default(autoincrement())
+  title String
+  content String?
+  published Boolean @default(false)
+  author User @relation(fields: [authorid], references: [id])
+  authorid Int
+}
 
 
